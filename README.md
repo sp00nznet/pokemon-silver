@@ -6,19 +6,29 @@ This repository ports **Pokémon Silver Version (Game Boy Color, 1999/2000)** to
 
 Silver shares its engine with Gold — the generated `rom.c` is essentially the same size (~58 MB; Crystal's is ~85 MB because Crystal adds the Suicune story arc, Unown content, and mobile-adapter scaffolding). The same MBC3+TIMER+RAM+BATTERY mapper (cart type 0x10), the same RTC `.rtc` sidecar mechanism, the same recipe.
 
+|  |  |
+|---|---|
+| ![Title screen](screenshots/logo.png) | ![Prof. Elm](screenshots/oak.png) |
+| Lugia silhouette over the ocean — ©2000 GAME FREAK. | "Welcome to the world of POKéMON!" |
+| ![Wild Rattata](screenshots/rattata.png) | ![Overworld](screenshots/world.png) |
+| Wild Rattata — Silver's early-route encounter table. | Overworld; player + NPC, CGB palettes, scrolling. |
+
 ---
 
-## ⚠️ Status: Bring-up
+## ✅ Status: First boot complete
 
 | Milestone | Status |
 | --- | :---: |
 | Repo scaffolding (CMake, submodule, entry point) | ✅ |
 | Cart identified: `POKEMON_SLVAAXE`, MBC3+TIMER+RAM+BATTERY | ✅ |
 | Recompile (`gbrecomp` → 58 MB `rom.c` + 13 MB `rom_rom.c`) | ✅ |
-| `rom.exe` builds under MSVC + vcpkg SDL2 | ⏳ |
-| First boot to title screen | ⏳ |
-| RTC persistence works (same `.rtc` sidecar as Gold/Crystal) | ⏳ |
-| Add Silver row to `gb-recompiled/COMPATIBILITY.md` | ⏳ |
+| `rom.exe` builds under MSVC + vcpkg SDL2 (13.5 MB binary) | ✅ |
+| First boot to title screen (visually confirmed) | ✅ |
+| Intro dialogue + wild encounter + overworld render | ✅ |
+| RTC persistence (same `.rtc` sidecar as Gold/Crystal) | ✅ |
+| Add Silver row to `gb-recompiled/COMPATIBILITY.md` | ✅ |
+| Day/night cycle visually confirmed | ⏳ user-test |
+| Save round-trip a full party + box | ⏳ user-test |
 
 ---
 
